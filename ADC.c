@@ -3,36 +3,6 @@
 #include <avr/io.h>
 
 
-//void ADC_init(const ADC_Config *config) {
-//
-//    /* Set Reference Voltage */
-//    ADMUX = (config->ref_volt << REFS0);
-//
-//
-//    ADCSRA = (1 << ADEN) | config->prescaler;
-//
-//    /* Enable Auto Trigger if required */
-//    if (config->auto_trigger) {
-//        ADCSRA |= (1 << ADATE);
-//    }
-//}
-//
-//uint16 ADC_readChannel(uint8 channel_num) {
-//    /* Select ADC channel (0-7) */
-//    ADMUX = (ADMUX & 0xE0) | (channel_num & 0x07);
-//
-//    /* Start Conversion */
-//    SET_BIT(ADCSRA, ADSC);
-//
-//    /* Wait for conversion to complete */
-//    while (BIT_IS_CLEAR(ADCSRA, ADIF));
-//
-//    /* Clear ADIF */
-//    SET_BIT(ADCSRA, ADIF);
-//
-//    /* Return ADC result */
-//    return ADC;
-//}
 
 
 void ADC_init(void)
